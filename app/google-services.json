@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "261618397985",
+    "firebase_url": "https://facedetectone.firebaseio.com",
+    "project_id": "facedetectone",
+    "storage_bucket": "facedetectone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261618397985:android:1c38520b48dc090abc8460",
+        "android_client_info": {
+          "package_name": "com.raj.facedetectone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "261618397985-70dg33ml24urt66206ha7e9vsvp5tms0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.raj.facedetectone",
+            "certificate_hash": "71e2849d52ed897ba656e374dd4ea0c714d6e7d5"
+          }
+        },
+        {
+          "client_id": "261618397985-mruqa65todqja28le4pcfvb5iie6btig.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2shqZHRdsC5RJMmkl9knVQ2pyrKChh9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "261618397985-mruqa65todqja28le4pcfvb5iie6btig.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
