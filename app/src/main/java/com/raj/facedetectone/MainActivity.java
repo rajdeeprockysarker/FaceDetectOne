@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
         img=(ImageView)findViewById(R.id.img);
         btnProgress=(Button)findViewById(R.id.btnProgress);
 
-        final Bitmap bitmapFactory=BitmapFactory.decodeResource(getApplicationContext().getResources(),R.drawable.imgfacone);
-        img.setImageBitmap(bitmapFactory);
+        final Bitmap bitmapResource=BitmapFactory.decodeResource(getApplicationContext().getResources(),R.drawable.imgfacone);
+        img.setImageBitmap(bitmapResource);
 
 
         final Paint paint=new Paint();
@@ -46,23 +46,16 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        final Bitmap bitmap=Bitmap.createBitmap(bitmapFactory.getWidth(),bitmapFactory.getHeight(),Bitmap.Config.RGB_565);
+        final Bitmap bitmap=Bitmap.createBitmap(bitmapResource.getWidth(),bitmapResource.getHeight(),Bitmap.Config.RGB_565);
 
         final Canvas canvas=new Canvas(bitmap);
-        canvas.drawBitmap(bitmapFactory,0,0,null);
+        canvas.drawBitmap(bitmapResource,0,0,null);
 
 
 
         btnProgress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseVisionFaceDetectorOptions highAccuracyOpts =
-                        new FirebaseVisionFaceDetectorOptions.Builder()
-                                .setPerformanceMode(FirebaseVisionFaceDetectorOptions.ACCURATE)
-                                .setLandmarkMode(FirebaseVisionFaceDetectorOptions.ALL_LANDMARKS)
-                                .setClassificationMode(FirebaseVisionFaceDetectorOptions.ALL_CLASSIFICATIONS)
-                                .build();
-
 
                 FaceDetector highAccuracyOpts1 =
                         new FaceDetector.Builder(getApplicationContext())
@@ -81,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
-                Frame frame=new Frame.Builder().setBitmap(bitmapFactory).build();
+                Frame frame=new Frame.Builder().setBitmap(bitmapResource).build();
                 SparseArray<Face> faceSparseArray=highAccuracyOpts1.detect(frame);
 
                 canvas.drawBitmap(bitmap,0,0,null);
